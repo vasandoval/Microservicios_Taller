@@ -1,8 +1,8 @@
 {
     "require": {
+        "illuminate/database": "^9.52",
         "slim/slim": "4.*",
-        "slim/psr7": "^1.8",
-        "illuminate/database": "*"
+        "slim/psr7": "^1.8"
     },
     
     "autoload": {
@@ -11,5 +11,3 @@
     }
 }
 }
-
-
