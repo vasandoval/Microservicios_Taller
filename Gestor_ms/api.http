@@ -1,0 +1,5 @@
+### Hola mundo!
+GET http://127.0.0.1:8000
+
+### Hola
+POST http://127.0.0.1:8000/hola
