@@ -1,25 +1,25 @@
 <?php
 
 use Slim\App;
-use App\Contactos\Presentation\Repositories\Test;
-use App\Contactos\Presentation\Repositories\ContactosRepository;
+use App\Gestor\Presentation\Repositories\TestRepository;
+use App\Gestor\Presentation\Repositories\SprintsRepository;
 use Slim\Routing\RouteCollectorProxy;
 
 return function (App $app) {
-    $app->get('/', [Test::class, 'default']);
-    $app->post('/hola', [Test::class, 'hola']);
+    $app->get('/', [TestRepository::class, 'default']);
+    $app->post('/hola', [TestRepository::class, 'hola']);
 
-    $app->post('/contacto', [ContactosRepository::class, 'create']);
-    $app->get('/contactos', [ContactosRepository::class, 'all']);
-    $app->get('/contacto/{id}', [ContactosRepository::class, 'detail']);
-    $app->put('/contacto/{id}', [ContactosRepository::class, 'update']);
-    $app->delete('/contacto/{id}', [ContactosRepository::class, 'delete']);
+    $app->post('/sprint', [SprintsRepository::class, 'create']);
+    $app->get('/sprints', [SprintsRepository::class, 'all']);
+    $app->get('/sprint/{id}', [SprintsRepository::class, 'detail']);
+    $app->put('/sprint/{id}', [SprintsRepository::class, 'update']);
+    $app->delete('/sprint/{id}', [SprintsRepository::class, 'delete']);
 
-    $app->group('/contactos-v2', function (RouteCollectorProxy $group) {
-        $group->get('', [ContactosRepository::class, 'all']);
-        $group->get('/{id}', [ContactosRepository::class, 'detail']);
-        $group->post('', [ContactosRepository::class, 'create']);
-        $group->put('/{id}', [ContactosRepository::class, 'update']);
-        $group->delete('/{id}', [ContactosRepository::class, 'delete']);
+    $app->group('/sprints-v2', function (RouteCollectorProxy $group) {
+        $group->get('', [SprintsRepository::class, 'all']);
+        $group->get('/{id}', [SprintsRepository::class, 'detail']);
+        $group->post('', [SprintsRepository::class, 'create']);
+        $group->put('/{id}', [SprintsRepository::class, 'update']);
+        $group->delete('/{id}', [SprintsRepository::class, 'delete']);
     });
 };
