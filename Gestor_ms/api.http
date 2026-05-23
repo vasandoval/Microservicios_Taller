@@ -5,12 +5,10 @@ GET http://127.0.0.1:8000
 POST http://127.0.0.1:8000/hola
 
 
-### ── SPRINTS ──────────────────────────────
+### SPRINTS 
 
 ### Listar todos los sprints
 GET http://127.0.0.1:8000/sprints
-
-###
 
 ### Crear un nuevo sprint
 POST http://127.0.0.1:8000/sprint
@@ -22,12 +20,8 @@ Content-Type: application/json
     "fecha_fin": "2026-05-14"
 }
 
-###
-
-### Ver detalle de un sprint (cambiar el ID según corresponda)
+### Ver detalle de un sprint 
 GET http://127.0.0.1:8000/sprint/2
-
-###
 
 ### Actualizar un sprint
 PUT http://127.0.0.1:8000/sprint/3
@@ -39,18 +33,14 @@ Content-Type: application/json
     "fecha_fin": "2026-05-16"
 }
 
-###
-
 ### Eliminar un sprint
 DELETE http://127.0.0.1:8000/sprint/1
 
 
-### ── HISTORIAS DE USUARIO ─────────────────
+### ── HISTORIAS DE USUARIO
 
 ### Listar todas las historias
 GET http://127.0.0.1:8000/historias
-
-###
 
 ### Crear una nueva historia
 POST http://127.0.0.1:8000/historia
@@ -67,12 +57,8 @@ Content-Type: application/json
     "sprint_id": 2
 }
 
-###
-
 ### Ver detalle de una historia
 GET http://127.0.0.1:8000/historia/2
-
-###
 
 ### Actualizar una historia (cambiar estado a 'finalizada')
 PUT http://127.0.0.1:8000/historia/9
@@ -89,24 +75,17 @@ Content-Type: application/json
     "sprint_id": 2
 }
 
-###
-
 ### Eliminar una historia
 DELETE http://127.0.0.1:8000/historia/1
-
-###
 
 ### Ver historias de un sprint específico
 GET http://127.0.0.1:8000/historias/sprint/2
 
 
-### ── INFORMES ──────────────────────────────
+### INFORMES
 
 ### Informe de un sprint específico
 GET http://127.0.0.1:8000/informe/sprint/2
-
-
-###
 
 ### Informe general de todos los sprints
 GET http://127.0.0.1:8000/informes
