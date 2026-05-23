@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informes</title>
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/informes.css" />
+  </head>
+  <body>
+
+    <header class="header">
+      <a href="../index.html" class="btn-volver">← Menú</a>
+      <h1>Informes</h1>
+    </header>
+
+    <main class="page-content">
+
+      <!-- FILTROS -->
+      <div class="filtros-informe">
+        <div class="filtro-grupo">
+          <label>Filtrar por Sprint:</label>
+          <select id="filtroSprint">
+            <option value="">Todos los sprints</option>
+          </select>
+        </div>
+        <div class="filtro-grupo">
+          <label>Filtrar por Responsable:</label>
+          <input type="text" id="filtroResponsable" placeholder="Nombre del responsable..." />
+        </div>
+        <button id="btnFiltrar" class="btn-primario">Aplicar filtros</button>
+      </div>
+
+      <!-- RESUMEN GENERAL -->
+      <section class="resumen-cards" id="resumenCards">
+        <div class="card card-total">
+          <span class="card-numero" id="totalHistorias">-</span>
+          <span class="card-label">Total historias</span>
+        </div>
+        <div class="card card-nueva">
+          <span class="card-numero" id="totalNuevas">-</span>
+          <span class="card-label">Nuevas</span>
+        </div>
+        <div class="card card-activa">
+          <span class="card-numero" id="totalActivas">-</span>
+          <span class="card-label">Activas</span>
+        </div>
+        <div class="card card-finalizada">
+          <span class="card-numero" id="totalFinalizadas">-</span>
+          <span class="card-label">Finalizadas</span>
+        </div>
+        <div class="card card-impedimento">
+          <span class="card-numero" id="totalImpedimentos">-</span>
+          <span class="card-label">Impedimentos</span>
+        </div>
+      </section>
+
+      <!-- TABLA DE HISTORIAS FILTRADAS -->
+      <section class="tabla-section">
+        <h2 class="tabla-titulo">Detalle de historias</h2>
+        <table id="informesTB">
+          <thead>
+            <tr>
+              <th>Sprint</th>
+              <th>Título</th>
+              <th>Responsable</th>
+              <th>Estado</th>
+              <th>Puntos</th>
+              <th>F. Inicio</th>
+              <th>F. Fin</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td colspan="7">Cargando...</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <p>2026 — Gestor de Historias de Usuario</p>
+      <p>Valeria Sandoval | Salomé Aguirre — Universidad de Boyacá</p>
+    </footer>
+
+    <script src="../js/informes/informes.js"></script>
+  </body>
+</html>

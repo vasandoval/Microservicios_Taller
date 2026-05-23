@@ -1,0 +1,85 @@
+/*  FILTROS INFORME  */
+.filtros-informe {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: white;
+  border: 1px solid #d0d7e3;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin: 24px auto;
+  max-width: 1300px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.filtro-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.filtro-grupo label {
+  font-size: 0.83rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.filtro-grupo select,
+.filtro-grupo input {
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.88rem;
+  min-width: 200px;
+  font-family: inherit;
+}
+
+/*  CARDS DE RESUMEN  */
+.resumen-cards {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 0 auto 28px;
+  max-width: 1300px;
+  padding: 0 24px;
+}
+
+.card {
+  flex: 1;
+  min-width: 130px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #d0d7e3;
+  text-align: center;
+}
+
+.card-numero {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.card-label {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.card-total      .card-numero { color: #1a73e8; }
+.card-nueva      .card-numero { color: #1a73e8; }
+.card-activa     .card-numero { color: #1e8e3e; }
+.card-finalizada .card-numero { color: #5f6368; }
+.card-impedimento .card-numero { color: #c5221f; }
+
+/*  TABLA SECCIÓN  */
+.tabla-section {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+}

@@ -1,0 +1,67 @@
+/*  FILTROS BAR  */
+.filtros-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.filtros {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.filtros label { color: #555; font-weight: 500; }
+
+.filtros select {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  background-color: #fff;
+}
+
+/*  GRUPOS POR SPRINT  */
+.sprint-grupo {
+  margin-bottom: 24px;
+}
+
+.sprint-grupo__header {
+  background-color: #e8f0fe;
+  border-left: 4px solid #1a73e8;
+  padding: 10px 16px;
+  border-radius: 6px 6px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sprint-grupo__nombre {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1a73e8;
+}
+
+.sprint-grupo__fechas {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.sprint-grupo table {
+  border-radius: 0 0 8px 8px;
+  border-top: none;
+}
+
+.sin-historias {
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  color: #999;
+  background: white;
+  border: 1px solid #d0d7e3;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+}

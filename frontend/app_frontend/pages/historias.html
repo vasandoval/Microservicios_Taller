@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Historias</title>
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/historias.css" />
+  </head>
+  <body>
+
+    <header class="header">
+      <a href="../index.html" class="btn-volver">← Menú</a>
+      <h1>Historias de Usuario</h1>
+    </header>
+
+    <main class="page-content">
+      <div class="content">
+
+        <!-- FORMULARIO -->
+        <form name="historiaForm" class="formulario">
+          <h2 class="form-titulo">Crear Historia</h2>
+          <div>
+            <label>Título:</label>
+            <input type="text" name="titulo" />
+            <p id="msgTitulo" class="inputError">Campo obligatorio</p>
+          </div>
+          <div>
+            <label>Descripción <span class="hint">(Como... quiero... para...)</span>:</label>
+            <textarea name="descripcion" rows="3"></textarea>
+          </div>
+          <div>
+            <label>Responsable:</label>
+            <input type="text" name="responsable" />
+          </div>
+          <div>
+            <label>Estado:</label>
+            <select name="estado">
+              <option value="nueva">Nueva</option>
+              <option value="activa">Activa</option>
+              <option value="finalizada">Finalizada</option>
+              <option value="impedimento">Impedimento</option>
+            </select>
+          </div>
+          <div>
+            <label>Puntos de complejidad:</label>
+            <input type="number" name="puntos" min="1" max="100" />
+          </div>
+          <div>
+            <label>Sprint:</label>
+            <select name="sprint_id" id="selectSprint">
+              <option value="">-- Selecciona un sprint --</option>
+            </select>
+            <p id="msgSprint" class="inputError">Campo obligatorio</p>
+          </div>
+          <div>
+            <label>Fecha inicio:</label>
+            <input type="date" name="fecha_creacion" />
+          </div>
+          <div>
+            <label>Fecha fin:</label>
+            <input type="date" name="fecha_finalizacion" />
+          </div>
+          <div class="buttons">
+            <button type="reset">Cancelar</button>
+            <button type="submit">Guardar</button>
+          </div>
+        </form>
+
+        <!-- HISTORIAS AGRUPADAS POR SPRINT -->
+        <div class="tabla-wrapper">
+          <div class="filtros-bar">
+            <h2 class="tabla-titulo">Historias agrupadas por Sprint</h2>
+            <div class="filtros">
+              <label>Filtrar por estado:</label>
+              <select id="filtroEstado">
+                <option value="">Todos</option>
+                <option value="nueva">Nueva</option>
+                <option value="activa">Activa</option>
+                <option value="finalizada">Finalizada</option>
+                <option value="impedimento">Impedimento</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Los grupos de sprint se generan dinámicamente aquí -->
+          <div id="historiasAgrupadas">
+            <p class="cargando">Cargando historias...</p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal1" class="modal close">
+      <p class="modal__texto"></p>
+      <button class="modal__btn">Aceptar</button>
+    </div>
+
+    <script src="../js/shared/modal.js"></script>
+    <script src="../js/historias/historias.js"></script>
+    <script src="../js/historias/historia_form.js"></script>
+  </body>
+</html>

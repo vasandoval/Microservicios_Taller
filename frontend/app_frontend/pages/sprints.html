@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Sprints</title>
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+  </head>
+  <body>
+
+    <header class="header">
+      <a href="../index.html" class="btn-volver">← Menú</a>
+      <h1>Gestión de Sprints</h1>
+    </header>
+
+    <main class="page-content">
+      <div class="content">
+
+        <!-- FORMULARIO -->
+        <form name="sprintForm" class="formulario">
+          <h2 class="form-titulo">Crear Sprint</h2>
+          <div>
+            <label>Nombre:</label>
+            <input type="text" name="nombre" />
+            <p id="msgNombre" class="inputError">Campo obligatorio</p>
+          </div>
+          <div>
+            <label>Fecha inicio:</label>
+            <input type="date" name="fecha_inicio" />
+            <p id="msgInicio" class="inputError">Campo obligatorio</p>
+          </div>
+          <div>
+            <label>Fecha fin:</label>
+            <input type="date" name="fecha_fin" />
+            <p id="msgFin" class="inputError">Campo obligatorio</p>
+          </div>
+          <div class="buttons">
+            <button type="reset">Cancelar</button>
+            <button type="submit">Guardar</button>
+          </div>
+        </form>
+
+        <!-- TABLA -->
+        <div class="tabla-wrapper">
+          <h2 class="tabla-titulo">Lista de Sprints</h2>
+          <table id="sprintsTB">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Fecha inicio</th>
+                <th>Fecha fin</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td colspan="5">Cargando...</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal1" class="modal close">
+      <p class="modal__texto"></p>
+      <button class="modal__btn">Aceptar</button>
+    </div>
+
+    <script src="../js/shared/modal.js"></script>
+    <script src="../js/sprints/sprints.js"></script>
+    <script src="../js/sprints/sprint_form.js"></script>
+  </body>
+</html>
