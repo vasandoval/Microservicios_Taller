@@ -71,11 +71,11 @@
   font-weight: 500;
 }
 
-.card-total      .card-numero { color: #1a73e8; }
-.card-nueva      .card-numero { color: #1a73e8; }
-.card-activa     .card-numero { color: #1e8e3e; }
-.card-finalizada .card-numero { color: #5f6368; }
-.card-impedimento .card-numero { color: #c5221f; }
+.card-total      .card-numero { color: #224d86; }
+.card-nueva      .card-numero { color: #4a6c97; }
+.card-activa     .card-numero { color: #478a5a; }
+.card-finalizada .card-numero { color: #098497; }
+.card-impedimento .card-numero { color: #764c86; }
 
 /*  TABLA SECCIÓN  */
 .tabla-section {

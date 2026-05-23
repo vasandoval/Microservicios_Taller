@@ -1,6 +1,6 @@
 .modal {
     position: fixed;
-    border: 1px solid #ccc;
+    border: 1px solid #3f2f90db;
     border-radius: 14px;
     padding: 22px 28px;
     min-width: 210px;
@@ -10,7 +10,7 @@
     justify-content: center;
     left: calc(50vw - 105px);
     top: calc(50vh - 50px);
-    background-color: #fff;
+    background-color: #d0ddfa;
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     transition: top 400ms ease;
     z-index: 999;
@@ -28,7 +28,7 @@
 }
 
 .modal__btn {
-    background-color: #1a73e8;
+    background-color: #194e95;
     color: white;
     border: none;
     padding: 7px 24px;
@@ -36,4 +36,4 @@
     cursor: pointer;
     font-size: 0.88rem;
 }
-.modal__btn:hover { background-color: #1558b0; }
+.modal__btn:hover { background-color: #a86848; }

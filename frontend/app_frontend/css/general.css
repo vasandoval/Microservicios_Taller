@@ -6,10 +6,12 @@
 }
 
 body {
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: #cddc394a;
   color: #d8a2b3;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* HEADER */
@@ -78,7 +80,7 @@ body {
 .form-titulo {
   font-size: 1rem;
   font-weight: 600;
-  color: #1a73e8;
+  color: #000000;
   margin-bottom: 16px;
   padding-bottom: 8px;
   border-bottom: 2px solid #e8f0fe;
@@ -94,7 +96,7 @@ body {
   font-size: 0.83rem;
   font-weight: 500;
   margin-bottom: 4px;
-  color: #444;
+  color: #90003e;
 }
 
 .hint {
@@ -110,7 +112,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 0.88rem;
-  background-color: #fafafa;
+  background-color: #d6c6e0;
   transition: border-color 0.2s;
   font-family: inherit;
 }
@@ -119,8 +121,8 @@ body {
 .formulario select:focus,
 .formulario textarea:focus {
   outline: none;
-  border-color: #1a73e8;
-  background-color: #fff;
+  border-color: #9094c5;
+  background-color: #c1c3f0;
 }
 
 .buttons {
@@ -131,8 +133,8 @@ body {
 }
 
 .formulario button[type="submit"] {
-  background-color: #1a73e8;
-  color: white;
+  background-color: #8b79c6;
+  color: rgb(255 255 255);
   border: none;
   padding: 8px 20px;
   border-radius: 5px;
@@ -140,7 +142,7 @@ body {
   font-size: 0.88rem;
   transition: background-color 0.2s;
 }
-.formulario button[type="submit"]:hover { background-color: #1558b0; }
+.formulario button[type="submit"]:hover { background-color: #9953c3; }
 
 .formulario button[type="reset"] {
   background-color: #e8eaed;
@@ -152,7 +154,7 @@ body {
   font-size: 0.88rem;
   transition: background-color 0.2s;
 }
-.formulario button[type="reset"]:hover { background-color: #d0d3d8; }
+.formulario button[type="reset"]:hover { background-color: #8c9fbe; }
 
 .inputError {
   color: #cc0000;
@@ -168,10 +170,10 @@ body {
 }
 
 .tabla-titulo {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1a73e8;
-  border-left: 4px solid #1a73e8;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #294972;
+  border-left: 4px solid #1b4e96;
   padding-left: 10px;
   margin-bottom: 14px;
 }
@@ -180,30 +182,30 @@ body {
 table {
   border-collapse: collapse;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #9abbcb;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #d0d7e3;
-  font-size: 0.87rem;
+  font-size: 1rem;
 }
 
-thead { background-color: #1a73e8; color: white; }
+thead { background-color: #478b9e; color: white; }
 
 th {
-  padding: 10px 14px;
+  padding: 15px 30px;
   text-align: left;
-  font-weight: 600;
-  font-size: 0.85rem;
+  font-weight: 700;
+  font-size: 0.90rem;
 }
 
 td {
-  padding: 9px 14px;
-  border-bottom: 1px solid #eaedf2;
-  color: #333;
+  padding: 11px 19px;
+  border-bottom: 1px solid #657693;
+  color: #ffffff;
 }
 
 tbody tr:last-child td { border-bottom: none; }
-tbody tr:hover { background-color: #f0f5ff; }
+tbody tr:hover { background-color: #6eb6be; }
 
 /*  BOTONES DE TABLA  */
 .btn-borrar, .btn-editar {
@@ -216,10 +218,10 @@ tbody tr:hover { background-color: #f0f5ff; }
   transition: background-color 0.2s;
 }
 
-.btn-borrar { background-color: #fde8e8; color: #c0392b; }
-.btn-borrar:hover { background-color: #f5c6c6; }
+.btn-borrar { background-color: #fde8e8; color: #c56868; }
+.btn-borrar:hover { background-color: #fffcd4db; }
 
-.btn-editar { background-color: #e8f0fe; color: #1a73e8; }
+.btn-editar { background-color: #e8f0fe; color: #3e68a0; }
 .btn-editar:hover { background-color: #c8d8f8; }
 
 /*  BADGE ESTADO  */
@@ -231,9 +233,9 @@ tbody tr:hover { background-color: #f0f5ff; }
   font-weight: 600;
 }
 .badge-nueva       { background-color: #e8f0fe; color: #1a73e8; }
-.badge-activa      { background-color: #e6f4ea; color: #1e8e3e; }
-.badge-finalizada  { background-color: #e8eaed; color: #5f6368; }
-.badge-impedimento { background-color: #fce8e6; color: #c5221f; }
+.badge-activa      { background-color: #e6f4ea; color: #467b55; }
+.badge-finalizada  { background-color: #e8eaed; color: #1c3f6a; }
+.badge-impedimento { background-color: #fce8e6; color: #8b48ac; }
 
 /*  FOOTER  */
 .footer {
@@ -242,13 +244,13 @@ tbody tr:hover { background-color: #f0f5ff; }
   padding: 18px;
   font-size: 0.8rem;
   color: #ffffff;
-  margin-top: 40px;
+  margin-top: auto;
 }
 .footer p { margin: 2px 0; }
 
 /*  BOTONES GENÉRICOS  */
 .btn-primario {
-  background-color: #1a73e8;
+  background-color: #628bc1;
   color: white;
   border: none;
   padding: 8px 20px;
@@ -257,7 +259,7 @@ tbody tr:hover { background-color: #f0f5ff; }
   font-size: 0.88rem;
   transition: background-color 0.2s;
 }
-.btn-primario:hover { background-color: #1558b0; }
+.btn-primario:hover { background-color: #32527c; }
 
 .cargando {
   color: #888;
