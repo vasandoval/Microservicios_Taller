@@ -1,9 +1,7 @@
-/*  VARIABLES  */
 const BASE_URL = 'http://127.0.0.1:8000';
 const sprints   = [];
 const historias = [];
 
-/*  BADGE  */
 const badgeEstado = (estado) => {
     const span = document.createElement('span');
     span.textContent = estado;
@@ -11,7 +9,7 @@ const badgeEstado = (estado) => {
     return span;
 };
 
-/*  CARGAR SPRINTS EN FILTRO  */
+
 const cargarFiltroSprints = () => {
     const select = document.getElementById('filtroSprint');
     sprints.forEach(s => {
@@ -22,7 +20,6 @@ const cargarFiltroSprints = () => {
     });
 };
 
-/*  ACTUALIZAR CARDS DE RESUMEN  */
 const actualizarResumen = (lista) => {
     document.getElementById('totalHistorias').textContent   = lista.length;
     document.getElementById('totalNuevas').textContent      = lista.filter(h => h.estado === 'nueva').length;
@@ -31,7 +28,6 @@ const actualizarResumen = (lista) => {
     document.getElementById('totalImpedimentos').textContent = lista.filter(h => h.estado === 'impedimento').length;
 };
 
-/*  MOSTRAR TABLA  */
 const mostrarInforme = (lista) => {
     actualizarResumen(lista);
 
@@ -67,7 +63,6 @@ const mostrarInforme = (lista) => {
     }
 };
 
-/*  APLICAR FILTROS  */
 const aplicarFiltros = () => {
     const sprintId     = document.getElementById('filtroSprint').value;
     const responsable  = document.getElementById('filtroResponsable').value.trim().toLowerCase();
@@ -84,7 +79,6 @@ const aplicarFiltros = () => {
     mostrarInforme(resultado);
 };
 
-/*  CONSULTAR DATOS  */
 const consultarSprints = async () => {
     try {
         const response = await fetch(`${BASE_URL}/sprints-v2`);
@@ -117,10 +111,8 @@ const consultarHistorias = async () => {
     console.log('Fin del request informes...');
 };
 
-/*  EVENTO FILTRAR  */
 document.getElementById('btnFiltrar').addEventListener('click', aplicarFiltros);
 
-/*  INICIO  */
 const init = async () => {
     await consultarSprints();
     await consultarHistorias();

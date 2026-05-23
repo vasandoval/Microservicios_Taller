@@ -1,11 +1,9 @@
-/*  VARIABLES  */
 const sprints = [];
 let sprintActual = null;
 const sprintsTabla = document.getElementById('sprintsTB');
 
 const BASE_URL = 'http://127.0.0.1:8000';
 
-/*  MOSTRAR TABLA  */
 const mostrarSprints = () => {
     const tbody = sprintsTabla.getElementsByTagName('tbody')[0];
     tbody.innerHTML = '';
@@ -48,7 +46,6 @@ const mostrarSprints = () => {
     }
 };
 
-/*  CONSULTAR TODOS  */
 const consultarSprints = async () => {
     try {
         if (sprints.length > 0) sprints.splice(0, sprints.length);
@@ -67,7 +64,6 @@ const consultarSprints = async () => {
     console.log('Fin del request sprints...');
 };
 
-/*  BORRAR  */
 const borrarSprint = async (id) => {
     try {
         const response = await fetch(`${BASE_URL}/sprints-v2/${id}`, { method: 'delete' });
@@ -81,11 +77,9 @@ const borrarSprint = async (id) => {
     console.log('Fin del request borrar sprint...');
 };
 
-/*  EDITAR  */
 const editarSprint = (value) => {
     sprintActual = value;
     setSprintForm(sprintActual);
 };
 
-/*  INICIO  */
 consultarSprints();

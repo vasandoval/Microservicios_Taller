@@ -1,4 +1,3 @@
-/*  FILTROS BAR  */
 .filtros-bar {
   display: flex;
   align-items: center;
@@ -25,7 +24,6 @@
   background-color: #fff;
 }
 
-/*  GRUPOS POR SPRINT  */
 .sprint-grupo {
   margin-bottom: 24px;
 }

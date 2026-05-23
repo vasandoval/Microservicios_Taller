@@ -14,7 +14,6 @@ body {
   flex-direction: column;
 }
 
-/* HEADER */
 .header {
 
   background-image: url('../recursos/job.jpg');
@@ -52,7 +51,6 @@ body {
   background-color: rgba(255,255,255,0.35);
 }
 
-/*LAYOUT PÁGINAS INTERNAS */
 .page-content {
   max-width: 1300px;
   margin: 28px auto;
@@ -66,7 +64,6 @@ body {
   gap: 28px;
 }
 
-/*  FORMULARIO  */
 .formulario {
   border: 1px solid #d0d7e3;
   border-radius: 10px;
@@ -163,7 +160,6 @@ body {
   display: none;
 }
 
-/*  TABLA WRAPPER  */
 .tabla-wrapper {
   flex: 1;
   min-width: 0;
@@ -178,7 +174,6 @@ body {
   margin-bottom: 14px;
 }
 
-/*  TABLA BASE  */
 table {
   border-collapse: collapse;
   width: 100%;
@@ -207,7 +202,6 @@ td {
 tbody tr:last-child td { border-bottom: none; }
 tbody tr:hover { background-color: #6eb6be; }
 
-/*  BOTONES DE TABLA  */
 .btn-borrar, .btn-editar {
   border: none;
   padding: 4px 11px;
@@ -224,7 +218,7 @@ tbody tr:hover { background-color: #6eb6be; }
 .btn-editar { background-color: #e8f0fe; color: #3e68a0; }
 .btn-editar:hover { background-color: #c8d8f8; }
 
-/*  BADGE ESTADO  */
+
 .badge {
   display: inline-block;
   padding: 2px 9px;
@@ -236,8 +230,6 @@ tbody tr:hover { background-color: #6eb6be; }
 .badge-activa      { background-color: #e6f4ea; color: #467b55; }
 .badge-finalizada  { background-color: #e8eaed; color: #1c3f6a; }
 .badge-impedimento { background-color: #fce8e6; color: #8b48ac; }
-
-/*  FOOTER  */
 .footer {
   background-color: #405979;
   text-align: center;
@@ -248,7 +240,7 @@ tbody tr:hover { background-color: #6eb6be; }
 }
 .footer p { margin: 2px 0; }
 
-/*  BOTONES GENÉRICOS  */
+
 .btn-primario {
   background-color: #628bc1;
   color: white;

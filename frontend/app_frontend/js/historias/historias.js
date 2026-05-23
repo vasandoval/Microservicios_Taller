@@ -1,10 +1,8 @@
-/*  VARIABLES  */
 const sprints = [];
 const historias = [];
 let historiaActual = null;
 const BASE_URL = 'http://127.0.0.1:8000';
 
-/*  BADGE  */
 const badgeEstado = (estado) => {
     const span = document.createElement('span');
     span.textContent = estado;
@@ -12,7 +10,6 @@ const badgeEstado = (estado) => {
     return span;
 };
 
-/*  MOSTRAR AGRUPADO POR SPRINT  */
 const mostrarHistoriasAgrupadas = () => {
     const contenedor = document.getElementById('historiasAgrupadas');
     contenedor.innerHTML = '';
@@ -25,7 +22,6 @@ const mostrarHistoriasAgrupadas = () => {
             historiasFiltradas = historiasFiltradas.filter(h => h.estado === filtroEstado);
         }
 
-        // Siempre muestra el sprint, aunque no tenga historias tras filtrar
         const grupo = document.createElement('div');
         grupo.className = 'sprint-grupo';
 
@@ -101,7 +97,6 @@ const mostrarHistoriasAgrupadas = () => {
     }
 };
 
-/*  CARGAR SPRINTS EN SELECT  */
 const cargarSprintsEnSelect = () => {
     const select = document.getElementById('selectSprint');
     while (select.options.length > 1) select.remove(1);
@@ -113,7 +108,6 @@ const cargarSprintsEnSelect = () => {
     });
 };
 
-/*  CONSULTAR SPRINTS  */
 const consultarSprints = async () => {
     try {
         const response = await fetch(`${BASE_URL}/sprints-v2`);
@@ -128,7 +122,6 @@ const consultarSprints = async () => {
     }
 };
 
-/*  CONSULTAR HISTORIAS  */
 const consultarHistorias = async () => {
     try {
         if (historias.length > 0) historias.splice(0, historias.length);
@@ -149,7 +142,6 @@ const consultarHistorias = async () => {
     console.log('Fin del request historias...');
 };
 
-/*  BORRAR  */
 const borrarHistoria = async (id) => {
     try {
         const response = await fetch(`${BASE_URL}/historias-v2/${id}`, { method: 'delete' });
@@ -162,18 +154,15 @@ const borrarHistoria = async (id) => {
     }
 };
 
-/*  EDITAR  */
 const editarHistoria = (value) => {
     historiaActual = value;
     setHistoriaForm(historiaActual);
 };
 
-/*  FILTRO  */
 document.getElementById('filtroEstado').addEventListener('change', () => {
     mostrarHistoriasAgrupadas();
 });
 
-/*  INICIO  */
 const init = async () => {
     await consultarSprints();
     await consultarHistorias();

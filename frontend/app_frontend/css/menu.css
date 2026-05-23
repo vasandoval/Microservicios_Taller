@@ -1,11 +1,9 @@
-/*  HEADER MENÚ  */
 .header {
   flex-direction: column;
   text-align: center;
   padding: 92px;
 }
 
-/*  GRID DE TARJETAS  */
 .menu-grid {
   display: flex;
   flex-direction: row;

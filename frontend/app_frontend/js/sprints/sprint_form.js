@@ -1,7 +1,5 @@
-/*  VARIABLES  */
 const sprintForm = document.forms['sprintForm'];
 
-/*  LEER / CARGAR FORMULARIO  */
 const getSprintForm = () => ({
     nombre: sprintForm['nombre'].value,
     fecha_inicio: sprintForm['fecha_inicio'].value,
@@ -15,7 +13,6 @@ const setSprintForm = (sprint) => {
     document.querySelector('.form-titulo').textContent = 'Editar Sprint';
 };
 
-/*  VALIDAR  */
 const validarSprint = (data) => {
     let valido = true;
     const campos = [
@@ -31,7 +28,6 @@ const validarSprint = (data) => {
     return valido;
 };
 
-/*  REGISTRAR  */
 const registrarSprint = async () => {
     try {
         const response = await fetch(`${BASE_URL}/sprints-v2`, {
@@ -52,7 +48,6 @@ const registrarSprint = async () => {
     console.log('Fin del request registrar sprint...');
 };
 
-/*  ACTUALIZAR  */
 const actualizarSprint = async () => {
     try {
         const response = await fetch(`${BASE_URL}/sprints-v2/${sprintActual.id}`, {
@@ -72,7 +67,6 @@ const actualizarSprint = async () => {
     console.log('Fin del request actualizar sprint...');
 };
 
-/*  EVENTOS  */
 sprintForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const data = getSprintForm();

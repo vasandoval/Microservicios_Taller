@@ -1,7 +1,5 @@
-/*  VARIABLES  */
 const historiaForm = document.forms['historiaForm'];
 
-/*  LEER / CARGAR FORMULARIO  */
 const getHistoriaForm = () => ({
     titulo: historiaForm['titulo'].value,
     descripcion: historiaForm['descripcion'].value,
@@ -25,7 +23,6 @@ const setHistoriaForm = (h) => {
     document.querySelector('.form-titulo').textContent = 'Editar Historia';
 };
 
-/*  VALIDAR  */
 const validarHistoria = (data) => {
     let valido = true;
     const campos = [
@@ -40,7 +37,6 @@ const validarHistoria = (data) => {
     return valido;
 };
 
-/*  REGISTRAR  */
 const registrarHistoria = async () => {
     try {
         const response = await fetch(`${BASE_URL}/historias-v2`, {
@@ -66,7 +62,6 @@ const registrarHistoria = async () => {
     console.log('Fin del request registrar historia...');
 };
 
-/*  ACTUALIZAR  */
 const actualizarHistoria = async () => {
     try {
         const response = await fetch(`${BASE_URL}/historias-v2/${historiaActual.id}`, {
@@ -86,7 +81,6 @@ const actualizarHistoria = async () => {
     console.log('Fin del request actualizar historia...');
 };
 
-/*  EVENTOS  */
 historiaForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const data = getHistoriaForm();
