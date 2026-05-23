@@ -6,7 +6,7 @@ require __DIR__ .'/../app/Config/database.php';
 require __DIR__ . '/../app/Gestor/Presentation/Repositories/Test.php';
 
 
-$cors = require __DIR__ . '/../app/Middlewares/CorsMiddleware.php';
+$cors = require __DIR__ . '/../app/Middlewares/Cors_Middleware.php';
 $endpoints = require __DIR__ . '/../app/Gestor/Presentation/Routers/Endpoints.php';
 
 $app = AppFactory::create();

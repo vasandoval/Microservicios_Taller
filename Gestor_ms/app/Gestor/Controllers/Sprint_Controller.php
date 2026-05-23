@@ -1,10 +1,10 @@
 <?php
-namespace App\Controllers;
+namespace App\Gestor\Controllers;
 
-use App\Models\Sprint;
+use App\Gestor\Models\Sprint;
 use Exception;
 
-class SprintsController {
+class Sprint_Controller {
 
     function getSprints() {
         $rows = Sprint::all();
