@@ -3,3 +3,110 @@ GET http://127.0.0.1:8000
 
 ### Hola
 POST http://127.0.0.1:8000/hola
+
+
+### ── SPRINTS ──────────────────────────────
+
+### Listar todos los sprints
+GET http://127.0.0.1:8000/sprints
+
+###
+
+### Crear un nuevo sprint
+POST http://127.0.0.1:8000/sprint
+Content-Type: application/json
+
+{
+    "nombre": "Sprint 1",
+    "fecha_inicio": "2026-05-01",
+    "fecha_fin": "2026-05-14"
+}
+
+###
+
+### Ver detalle de un sprint (cambiar el ID según corresponda)
+GET http://127.0.0.1:8000/sprint/2
+
+###
+
+### Actualizar un sprint
+PUT http://127.0.0.1:8000/sprint/3
+Content-Type: application/json
+
+{
+    "nombre": "Sprint 1 - Revisado",
+    "fecha_inicio": "2026-05-01",
+    "fecha_fin": "2026-05-16"
+}
+
+###
+
+### Eliminar un sprint
+DELETE http://127.0.0.1:8000/sprint/1
+
+
+### ── HISTORIAS DE USUARIO ─────────────────
+
+### Listar todas las historias
+GET http://127.0.0.1:8000/historias
+
+###
+
+### Crear una nueva historia
+POST http://127.0.0.1:8000/historia
+Content-Type: application/json
+
+{
+    "titulo": "Registrar nueva historia de usuario",
+    "descripcion": "Como usuario quiero poder crear historias para organizar el trabajo del sprint",
+    "responsable": "Carlos Gomez",
+    "estado": "nueva",
+    "puntos": 3,
+    "fecha_creacion": "2026-05-01",
+    "fecha_finalizacion": null,
+    "sprint_id": 2
+}
+
+###
+
+### Ver detalle de una historia
+GET http://127.0.0.1:8000/historia/2
+
+###
+
+### Actualizar una historia (cambiar estado a 'finalizada')
+PUT http://127.0.0.1:8000/historia/9
+Content-Type: application/json
+
+{
+    "titulo": "Registrar nueva historia de usuario",
+    "descripcion": "Como usuario quiero poder crear historias para organizar el trabajo del sprint",
+    "responsable": "Carlos Gomez",
+    "estado": "finalizada",
+    "puntos": 3,
+    "fecha_creacion": "2026-05-01",
+    "fecha_finalizacion": "2026-05-10",
+    "sprint_id": 2
+}
+
+###
+
+### Eliminar una historia
+DELETE http://127.0.0.1:8000/historia/1
+
+###
+
+### Ver historias de un sprint específico
+GET http://127.0.0.1:8000/historias/sprint/2
+
+
+### ── INFORMES ──────────────────────────────
+
+### Informe de un sprint específico
+GET http://127.0.0.1:8000/informe/sprint/2
+
+
+###
+
+### Informe general de todos los sprints
+GET http://127.0.0.1:8000/informes
